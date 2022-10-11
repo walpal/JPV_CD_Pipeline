@@ -1,8 +1,33 @@
 Description: This deploys a VPC
 Resources:
+  JPVsg:
+    Type: 'AWS::EC2::SecurityGroup'
+    Properties: {
+        GroupDescription: Allow http to client host
+        VpcId:
+          Ref: vpc-027d499ecf156034c
+        SecurityGroupIngress:
+        - IpProtocol: tcp
+          FromPort: 80
+          ToPort: 80
+          CidrIp: 0.0.0.0/0
+        SecurityGroupEgress:
+        - IpProtocol: -1
+          FromPort: -1
+          ToPort: -1
+          CidrIp: 0.0.0.0/0
+        }
+
   JPVECnode1:
     Type: 'AWS::EC2::Instance'
     Properties: {
         ImageId: 'ami-0ddab716196087271'
-        InstanceType: 't2.micro'
+        InstanceType: 't3.micro'
+        NetworkInterface:
+        - AssociatePublicIpAddress: true
+        DeviceIndex: "0"
+        GroupSet: 
+          - Ref: "JPVsg"
+        SubnetId: 
+            Ref: "subnet-0c60f78b06045f5d5"
         }
