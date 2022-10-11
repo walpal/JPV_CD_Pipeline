@@ -1,9 +1,9 @@
 # The JPV (Jumia Phone Validator) Microservice CD Pipeline
 
 ## Contents
-Microservice application Source codes (provided)
-Infrastructure codes (for AWS CloudFormation)
-Ansible Playbooks
+- Microservice application Source codes (provided)
+- Infrastructure codes (for AWS CloudFormation)
+- Ansible Playbooks
 
 The infrastructure codes is to automate all configurations and processes including but not only:
 - Servers Provisioning
