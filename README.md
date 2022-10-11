@@ -2,8 +2,8 @@
 
 ## Contents
 Microservice application Source codes (provided)
-Infrastructure codes (using AWS CloudFormation)
-Ansible Playbooks (for automated deployments)
+Infrastructure codes (for AWS CloudFormation)
+Ansible Playbooks
 
 The infrastructure codes is to automate all configurations and processes including but not only:
 - Servers Provisioning
