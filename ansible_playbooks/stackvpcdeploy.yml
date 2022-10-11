@@ -1,1 +1,1 @@
-aws cloudformation create-stack --stack-name jpvstack --region eu-west-3 --template-body file://startwithvpc.yml
+aws cloudformation create-stack --stack-name jpvstack --region eu-west-3 --template-body file://'C:\Users\walpal\Git Repos\JPV_CD_Pipeline\infra_codes\startwithvpc.yml'
