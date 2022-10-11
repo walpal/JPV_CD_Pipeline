@@ -1,0 +1,10 @@
+Description: This deploys a VPC
+Resources:
+  JPVStackVPC:
+    Type: 'AWS::EC2::VPC'
+    Properties:
+      CidrBlock: 172.31.0.0/16
+      EnableDnsHostnames: 'true'
+      Tags:
+      - Key: name
+        Value: jpvfirstvpc
